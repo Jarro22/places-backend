@@ -13,3 +13,247 @@
 1170 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
 23420 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
 1421474 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.DBTree  - DBTree: exporting list of DnD-type tree paths
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+999  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1190 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+1191 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+1298 [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+26321 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+53824 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+678750 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+735000 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+2024343 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024343 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024353 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024353 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024353 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024363 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2024363 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2086237 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2086237 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2086237 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2086237 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2086237 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2124725 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+2209741 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+2523191 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+2580364 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@43e50e5f]
+2580376 [Objects-Adder] INFO  ca.sqlpower.architect.swingui.PlayPen  - AddObjectsTask starting on thread Objects-Adder
+2580383 [Objects-Adder] INFO  ca.sqlpower.architect.swingui.PlayPen  - AddObjectsTask done
+2580411 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.PlayPen  - Unknown object dropped in PlayPen: id_comentarios: INTEGER
+2809499 [AWT-EventQueue-0] ERROR ca.sqlpower.architect.swingui.KettleDataSourceOptionsPanel  -  The map is: {}
+4682071 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE lugares (
+                id_lugares INT NOT NULL,
+                nombre VARCHAR(200) NOT NULL,
+                descripcion VARCHAR(500) NOT NULL,
+                latitud DECIMAL NOT NULL,
+                longitud DECIMAL(100) NOT NULL,
+                ubicacion DECIMAL(300) NOT NULL,
+                municipio VARCHAR(100) NOT NULL,
+                provincia VARCHAR(100) NOT NULL,
+                departamento VARCHAR(100) NOT NULL,
+                url VARCHAR(300) NOT NULL,
+                PRIMARY KEY (id_lugares)
+)
+4682072 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE horarios (
+                id_horarios INT NOT NULL,
+                id_lugares INT NOT NULL,
+                dia VARCHAR(50) NOT NULL,
+                apertura TIME NOT NULL,
+                cierre TIME NOT NULL,
+                PRIMARY KEY (id_horarios)
+)
+4682073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE funcionalidades (
+                id_funcionalidades INT NOT NULL,
+                nombre VARCHAR(50) NOT NULL,
+                PRIMARY KEY (id_funcionalidades)
+)
+4682073 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE roles (
+                id_rol INT NOT NULL,
+                nombre VARCHAR(100),
+                PRIMARY KEY (id_rol)
+)
+4682074 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE privilegios (
+                id_rol INT NOT NULL,
+                id_funcionalidades INT NOT NULL,
+                PRIMARY KEY (id_rol, id_funcionalidades)
+)
+4682075 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE personas (
+                Id_personas INT AUTO_INCREMENT NOT NULL,
+                nombres VARCHAR(100) NOT NULL,
+                primer_apellido VARCHAR(100) NOT NULL,
+                segundo_apellido VARCHAR(100) NOT NULL,
+                dni VARCHAR(50) NOT NULL,
+                complemento VARCHAR(2) NOT NULL,
+                fecha_nacimiento DATE NOT NULL,
+                genero VARCHAR(50) NOT NULL,
+                direccion VARCHAR(200) NOT NULL,
+                telefono_fijo INT NOT NULL,
+                celular INT NOT NULL,
+                email VARCHAR(100) NOT NULL,
+                PRIMARY KEY (Id_personas)
+)
+4682075 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE usuario (
+                Id_personas INT NOT NULL,
+                usuario VARCHAR(50) NOT NULL,
+                password VARCHAR(200) NOT NULL,
+                PRIMARY KEY (Id_personas)
+)
+4682076 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE UNIQUE INDEX usuario_idx
+ ON usuario
+ ( usuario )
+4682076 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+CREATE TABLE favoritos (
+                Id_personas INT NOT NULL,
+                id_lugares INT NOT NULL,
+                PRIMARY KEY (Id_personas, id_lugares)
+)
+4682076 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE comentarios (
+                id_comentarios INT NOT NULL,
+                comentario VARCHAR(500) NOT NULL,
+                calificacion INT NOT NULL,
+                fecha DATE NOT NULL,
+                Id_personas INT NOT NULL,
+                id_lugares INT NOT NULL,
+                Parent_id_comentarios INT NOT NULL,
+                PRIMARY KEY (id_comentarios)
+)
+4682077 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE fotos (
+                id_fotos INT NOT NULL,
+                id_lugares INT NOT NULL,
+                id_comentarios INT NOT NULL,
+                url VARCHAR(300) NOT NULL,
+                resea VARCHAR(100) NOT NULL,
+                PRIMARY KEY (id_fotos)
+)
+4682077 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE cuentas (
+                id_rol INT NOT NULL,
+                Id_personas INT NOT NULL,
+                PRIMARY KEY (id_rol, Id_personas)
+)
+4682078 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE horarios ADD CONSTRAINT lugares_horarios_fk
+FOREIGN KEY (id_lugares)
+REFERENCES lugares (id_lugares)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682078 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE fotos ADD CONSTRAINT lugares_fotos_fk
+FOREIGN KEY (id_lugares)
+REFERENCES lugares (id_lugares)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682079 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE comentarios ADD CONSTRAINT lugares_comentarios_fk
+FOREIGN KEY (id_lugares)
+REFERENCES lugares (id_lugares)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682079 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE favoritos ADD CONSTRAINT lugares_favoritos_fk
+FOREIGN KEY (id_lugares)
+REFERENCES lugares (id_lugares)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE privilegios ADD CONSTRAINT funcionalidades_roles_funcionalidades_fk
+FOREIGN KEY (id_funcionalidades)
+REFERENCES funcionalidades (id_funcionalidades)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE cuentas ADD CONSTRAINT roles_cuentas_fk
+FOREIGN KEY (id_rol)
+REFERENCES roles (id_rol)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE privilegios ADD CONSTRAINT roles_roles_funcionalidades_fk
+FOREIGN KEY (id_rol)
+REFERENCES roles (id_rol)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE usuario ADD CONSTRAINT personas_usuario_fk
+FOREIGN KEY (Id_personas)
+REFERENCES personas (Id_personas)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682080 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE cuentas ADD CONSTRAINT usuario_cuentas_fk
+FOREIGN KEY (Id_personas)
+REFERENCES usuario (Id_personas)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682082 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE comentarios ADD CONSTRAINT usuario_comentarios_fk
+FOREIGN KEY (Id_personas)
+REFERENCES usuario (Id_personas)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682082 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE favoritos ADD CONSTRAINT usuario_favoritos_fk
+FOREIGN KEY (Id_personas)
+REFERENCES usuario (Id_personas)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682083 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE fotos ADD CONSTRAINT comentarios_fotos_fk
+FOREIGN KEY (id_comentarios)
+REFERENCES comentarios (id_comentarios)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682084 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+ALTER TABLE comentarios ADD CONSTRAINT comentarios_comentarios_fk
+FOREIGN KEY (Parent_id_comentarios)
+REFERENCES comentarios (id_comentarios)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+4682099 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :25
+4686199 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - SQL_FILE_FILTER:SQL Script Files:[sql, ddl]
